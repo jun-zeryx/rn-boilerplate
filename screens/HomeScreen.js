@@ -7,10 +7,8 @@ import {
   Dimensions,
   Image,
 } from 'react-native';
-import { Card, Text, SearchBar, Rating } from 'react-native-elements'
+import { Card, Text, SearchBar, Rating, Icon } from 'react-native-elements'
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-
-const {height, width} = Dimensions.get('window');
 
 export default class HomeScreen extends React.Component {
 
@@ -74,15 +72,26 @@ export default class HomeScreen extends React.Component {
       <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
 
-        <View style={styles.container}>
-          <SearchBar
-          round
-          lightTheme
-          placeholder="Type Here..."
+        <View style={{flex:1, flexDirection: 'row'}}>
+          <Icon
+          raised
+          size={14}
+          name='search'
+          type='font-awesome'
+          color='grey'
+          onPress={() => console.log('hello')}
+          />
+          <Icon
+          raised
+          size={14}
+          name='settings'
+          type='feather'
+          color='grey'
+          onPress={() => console.log('hello')}
           />
         </View>
 
-        <View style={styles.contianer}>
+        <View style={styles.container}>
           <ScrollView
           horizontal
           pagingEnabled
@@ -118,6 +127,8 @@ export default class HomeScreen extends React.Component {
     )
   }
 }
+
+const {height, width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
