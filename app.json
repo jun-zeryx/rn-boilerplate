@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "auntyapp",
-    "slug": "aunty-app",
+    "name": "rnboilerplate",
+    "slug": "rn-boilerplate",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
